@@ -28,7 +28,9 @@ const Login = ({ setLogin }) => {
             <hr className='login-divider under' />
             <div className='not-member-container'>
                 <p className='not-member'>Not a member?</p>
-                <button className='sign-up'>Sign Up</button>
+                <button className='sign-up' onClick={() => setLogin(false)}>
+                    Sign Up
+                </button>
             </div>
         </div>
     );
