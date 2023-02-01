@@ -14,7 +14,7 @@ const Login = ({ setLogin }) => {
             <form action='#!' id='main'>
                 <h2 className='login-command'>Login to your account</h2>
                 <div class='input-parent'>
-                    <label for='username'>Email</label>
+                    <label for='email'>Email</label>
                     <input type='text' id='email' />
                 </div>
 
