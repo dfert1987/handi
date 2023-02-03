@@ -1,24 +1,23 @@
 import React from 'react';
-// import { RegisterUser } from './apis/authentication';
-import { Form } from 'antd';
+import { RegisterUser } from '../../../Apis/authentication';
+import { Form, message } from 'antd';
 import '../../../Styles/Login.css';
 
-const SignUp = ({ setLogin }) => {
-    const onFinish = (values) => {
-        console.log('Success:', values);
+const Register = ({ setLogin }) => {
+    const onFinish = async (values) => {
+        console.log(values);
+        try {
+            const response = await RegisterUser(values);
+            console.log(response);
+            if (response.success) {
+                message.success(response.message);
+            } else {
+                message.error(response.message);
+            }
+        } catch (error) {
+            message.error(error.message);
+        }
     };
-    // const handleSubmit = async (values) => {
-    // try {
-    //     const response = await RegisterUser(values);
-    //     if (response.success) {
-    //         message.success(response.message);
-    //     } else {
-    //         message.error(response.message);
-    //     }
-    // } catch (error) {
-    //     message.error(error.message);
-    // }
-    // };
 
     return (
         <div className='login-box'>
@@ -31,15 +30,17 @@ const SignUp = ({ setLogin }) => {
                 <Form layout='vertical' onFinish={onFinish}>
                     <h2 className='login-command'>Create your new account:</h2>
                     <Form.Item name='username' label='Username'>
-                        <input type='text' />
+                        <input type='text' defaultValue='' />
                     </Form.Item>
                     <Form.Item name='email' label='Email'>
-                        <input type='text' />
+                        <input type='text' defaultValue='' />
                     </Form.Item>
                     <Form.Item name='password' label='Password'>
-                        <input type='password' />
+                        <input type='password' defaultValue='' />
                     </Form.Item>
-                    <button className='register'>Register</button>
+                    <button type='submit' className='register'>
+                        Register
+                    </button>
                 </Form>
                 <hr className='login-divider under' />
                 <div className='not-member-container'>
@@ -53,4 +54,4 @@ const SignUp = ({ setLogin }) => {
     );
 };
 
-export default SignUp;
+export default Register;

@@ -1,14 +1,14 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "@firebase/firestore";
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAgDM5Q1-dcMTGiVL9dB9r8q_ft8Fyk8Gc",
-  authDomain: "handi-fc35a.firebaseapp.com",
-  projectId: "handi-fc35a",
-  storageBucket: "handi-fc35a.appspot.com",
-  messagingSenderId: "1069962181716",
-  appId: "1:1069962181716:web:26edc214885089510181c1",
-  measurementId: "G-4MZ1ZC1KHH"
+    apiKey: 'AIzaSyCTX6zU6e7ysHn0JjMFNDxqM-kVdid0Pj4',
+    authDomain: 'handi-app-d1bd8.firebaseapp.com',
+    projectId: 'handi-app-d1bd8',
+    storageBucket: 'handi-app-d1bd8.appspot.com',
+    messagingSenderId: '933178164023',
+    appId: '1:933178164023:web:303f790a6ff645c194d0b2',
+    measurementId: 'G-TGEM51BRPW',
 };
 
 export const app = initializeApp(firebaseConfig);
