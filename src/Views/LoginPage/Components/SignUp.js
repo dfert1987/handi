@@ -1,7 +1,22 @@
 import React from 'react';
+// import { RegisterUser } from './apis/authentication';
+import { Form } from 'antd';
 import '../../../Styles/Login.css';
 
 const SignUp = ({ setLogin }) => {
+    // const handleSubmit = async (values) => {
+    // try {
+    //     const response = await RegisterUser(values);
+    //     if (response.success) {
+    //         message.success(response.message);
+    //     } else {
+    //         message.error(response.message);
+    //     }
+    // } catch (error) {
+    //     message.error(error.message);
+    // }
+    // };
+
     return (
         <div className='login-box'>
             <div className='login-title-area'>
@@ -10,22 +25,19 @@ const SignUp = ({ setLogin }) => {
                     And start rating Austin's best party bathrooms today!
                 </h2>
                 <hr className='login-divider' />
-                <form action='#!' id='main'>
+                <Form layout='vertical'>
                     <h2 className='login-command'>Create your new account:</h2>
-                    <div class='input-parent'>
-                        <label for='username'>Username</label>
-                        <input type='text' id='username' />
-                    </div>
-                    <div class='input-parent'>
-                        <label for='email'>Email</label>
-                        <input type='text' id='email' />
-                    </div>
-                    <div class='input-parent'>
-                        <label for='password'>Password</label>
-                        <input type='password' id='password' />
-                    </div>
-                    <button type='submit'>Login</button>
-                </form>
+                    <Form.Item name='username' label='Username'>
+                        <input type='text' />
+                    </Form.Item>
+                    <Form.Item name='email' label='Email'>
+                        <input type='text' />
+                    </Form.Item>
+                    <Form.Item name='password' label='Password'>
+                        <input type='password' />
+                    </Form.Item>
+                    <button className="register">Register</button>
+                </Form>
                 <hr className='login-divider under' />
                 <div className='not-member-container'>
                     <p className='not-member'>Already a member?</p>

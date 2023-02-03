@@ -1,9 +1,44 @@
+html {
+    height: 100vh;
+    background-image: url(../Assets/Images/divebathroom.jpeg);
+}
+
+label {
+    margin-bottom: 0;
+    padding-bottom: 0 !important;
+    font-size: 20px !important;
+    font-family: 'Abel-Regular';
+}
+
+input {
+    font-size: 20px;
+    width: 100%;
+    padding: 0.25em;
+    font-family: 'Abel-Regular';
+}
+.ant-col.ant-form-item-label {
+    padding: 0 !important;
+}
+
+.register {
+    margin-top: 1em;
+}
+
+.ant-form-item {
+    margin-bottom: .25em !important;
+}
+
+.ant-form-item-control-input-content {
+    position: relative;
+    bottom: 0em;
+    font-size: 20px;
+}
+
 .main-screen {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(../Assets/Images/divebathroom.jpeg);
     font-family: 'Abel-Regular';
 }
 
