@@ -5,7 +5,6 @@ import '../../../Styles/Login.css';
 
 const Register = ({ setLogin }) => {
     const onFinish = async (values) => {
-        console.log(values);
         try {
             const response = await RegisterUser(values);
             if (response.success) {
@@ -31,10 +30,16 @@ const Register = ({ setLogin }) => {
                     <Form.Item
                         name='username'
                         label='Username'
+                        placeholder='Username'
                         rules={[
                             {
                                 required: true,
                                 message: 'Username is a required field.',
+                            },
+                            {
+                                min: 6,
+                                message:
+                                    'Username must be at least 6 characters long.',
                             },
                         ]}>
                         <input type='text' defaultValue='' />
@@ -42,10 +47,15 @@ const Register = ({ setLogin }) => {
                     <Form.Item
                         name='email'
                         label='Email'
+                        placeholder='email@gmail.com'
                         rules={[
                             {
                                 required: true,
                                 message: 'Email is a required field.',
+                            },
+                            {
+                                type: 'email',
+                                message: 'Please enter a valid email.',
                             },
                         ]}>
                         <input type='text' defaultValue='' />
@@ -53,10 +63,16 @@ const Register = ({ setLogin }) => {
                     <Form.Item
                         name='password'
                         label='Password'
+                        placeholder='password'
                         rules={[
                             {
                                 required: true,
                                 message: 'Password is a required field.',
+                            },
+                            {
+                                min: 8,
+                                message:
+                                    'Password must be atleast 8 characters.',
                             },
                         ]}>
                         <input type='password' defaultValue='' />
