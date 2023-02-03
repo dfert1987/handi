@@ -8,7 +8,6 @@ const Register = ({ setLogin }) => {
         console.log(values);
         try {
             const response = await RegisterUser(values);
-            console.log(response);
             if (response.success) {
                 message.success(response.message);
             } else {
@@ -29,13 +28,37 @@ const Register = ({ setLogin }) => {
                 <hr className='login-divider' />
                 <Form layout='vertical' onFinish={onFinish}>
                     <h2 className='login-command'>Create your new account:</h2>
-                    <Form.Item name='username' label='Username'>
+                    <Form.Item
+                        name='username'
+                        label='Username'
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Username is a required field.',
+                            },
+                        ]}>
                         <input type='text' defaultValue='' />
                     </Form.Item>
-                    <Form.Item name='email' label='Email'>
+                    <Form.Item
+                        name='email'
+                        label='Email'
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Email is a required field.',
+                            },
+                        ]}>
                         <input type='text' defaultValue='' />
                     </Form.Item>
-                    <Form.Item name='password' label='Password'>
+                    <Form.Item
+                        name='password'
+                        label='Password'
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Password is a required field.',
+                            },
+                        ]}>
                         <input type='password' defaultValue='' />
                     </Form.Item>
                     <button type='submit' className='register'>

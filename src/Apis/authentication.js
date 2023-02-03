@@ -10,12 +10,26 @@ export const RegisterUser = async (payload) => {
             collection(fireDB, 'users'),
             where('email', '==', payload.email)
         );
+        const qry2 = query(
+            collection(fireDB, 'users'),
+            where('username', '==', payload.username)
+        );
+        
         const querySnapshot = await getDocs(qry);
+        const querySnapshot2 = await getDocs(qry2);
+
         if (querySnapshot.size > 0) {
             return {
                 success: false,
                 message:
                     "There's already an account registered with this email.",
+            };
+        }
+
+        if (querySnapshot2.size > 0) {
+            return {
+                success: false,
+                message: 'That username is already taken.',
             };
         }
 
