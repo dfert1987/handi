@@ -1,6 +1,8 @@
 html {
     height: 100vh;
-    background-image: url(../Assets/Images/divebathroom.jpeg);
+    background-image: url(../Assets/Images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 label {
@@ -8,16 +10,44 @@ label {
     padding-bottom: 0 !important;
     font-size: 20px !important;
     font-family: 'Abel-Regular';
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+button {
+    background-color: #6bc8d0;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    font-family: 'Abel-Regular';
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 25px;
+    text-align: center;
+    transform: translateY(2);
+    transition: transform 900ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
 input {
     font-size: 20px;
     width: 100%;
     padding: 0.25em;
+    padding-left: 0.5em;
     font-family: 'Abel-Regular';
 }
 .ant-col.ant-form-item-label {
     padding: 0 !important;
+}
+
+.ant-form-item-label > label {
+    color: #6bc8d0 !important;
+    text-shadow: black 2px 1px 7px;
 }
 
 .register {
@@ -25,7 +55,7 @@ input {
 }
 
 .ant-form-item {
-    margin-bottom: .25em !important;
+    margin-bottom: 0.25em !important;
 }
 
 .ant-form-item-control-input-content {
@@ -45,36 +75,44 @@ input {
 .not-member-container {
     display: flex;
     flex-direction: row;
+    font-size: 1.45em;
+}
+
+.not-member {
+    text-shadow: 2px 1px 7px #6bc8d0;
 }
 
 .login-box {
-    background-color: #fbf7f5;
+    background-color: #4e4e4e;
     padding: 2em;
     border-radius: 4px;
-    border: 4px solid rgb(255, 41, 251);
-    box-shadow: 4px 4px 6px;
-    max-width: 18em;
+    border: 4px solid #e8345b;
+    box-shadow: #6bc8d0 2px 2px 80px 1px;
+    max-width: 20em;
 }
 
 .login-title {
     margin-top: 0;
     margin-bottom: 0;
+    color: #6bc8d0;
+    font-size: 2.25em;
+    text-shadow: black 2px 2px 7px;
 }
 
 .login-command {
     margin-bottom: 0.5em;
+    font-family: 'Abel-Regular';
+    font-style: bold;
+    font-size: 2em;
+    color: #6bc8d0;
+    text-shadow: black 2px 2px 1px;
 }
 
 .input-parent {
     display: block;
     margin-bottom: 20px;
 }
-label {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 8px;
-    color: #646464;
-}
+
 .input-parent input {
     padding: 10px 8px;
     width: 95%;
@@ -96,27 +134,6 @@ label {
 
 .under {
     margin-top: 1em;
-}
-
-/* CSS */
-button {
-    background-color: rgb(74, 210, 255);
-    border: 1px solid #137faa;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
-    box-sizing: border-box;
-    color: black;
-    cursor: pointer;
-    font-family: 'Abel-Regular';
-    font-size: 16px;
-    font-weight: 400;
-    padding: 10px 25px;
-    text-align: center;
-    transform: translateY(0);
-    transition: transform 150ms, box-shadow 150ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
 }
 
 .button-37:hover {
@@ -142,6 +159,9 @@ button:active {
     margin-top: 0;
     margin-bottom: 0;
     font-style: italic;
+    color: #e8345b;
+    font-size: 1.75em;
+    text-shadow: black 2px 2px 10px;
 }
 
 .sign-up {
@@ -152,6 +172,7 @@ button:active {
     padding: 0;
     padding-left: 0.5em;
     transition: 0.3s;
+    font-size: 1em;
 }
 .sign-up,
 .sign-up:active,
@@ -163,7 +184,7 @@ button:active {
 }
 
 .sign-up:hover {
-    color: black;
+    color: #e8345b;
 }
 
 @font-face {
