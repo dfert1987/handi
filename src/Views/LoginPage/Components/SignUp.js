@@ -4,6 +4,9 @@ import { Form } from 'antd';
 import '../../../Styles/Login.css';
 
 const SignUp = ({ setLogin }) => {
+    const onFinish = (values) => {
+        console.log('Success:', values);
+    };
     // const handleSubmit = async (values) => {
     // try {
     //     const response = await RegisterUser(values);
@@ -25,7 +28,7 @@ const SignUp = ({ setLogin }) => {
                     And start rating Austin's best party bathrooms today!
                 </h2>
                 <hr className='login-divider' />
-                <Form layout='vertical'>
+                <Form layout='vertical' onFinish={onFinish}>
                     <h2 className='login-command'>Create your new account:</h2>
                     <Form.Item name='username' label='Username'>
                         <input type='text' />
@@ -36,7 +39,7 @@ const SignUp = ({ setLogin }) => {
                     <Form.Item name='password' label='Password'>
                         <input type='password' />
                     </Form.Item>
-                    <button className="register">Register</button>
+                    <button className='register'>Register</button>
                 </Form>
                 <hr className='login-divider under' />
                 <div className='not-member-container'>

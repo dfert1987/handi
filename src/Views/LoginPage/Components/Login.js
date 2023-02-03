@@ -3,7 +3,10 @@ import { Form } from 'antd';
 import '../../../Styles/Login.css';
 
 const Login = ({ setLogin }) => {
-    const handleSubmit = () => {};
+    const onFinish = (values) => {
+        console.log('Success:', values);
+    };
+
     return (
         <div className='login-box'>
             <div className='login-title-area'>
@@ -13,8 +16,8 @@ const Login = ({ setLogin }) => {
                 </h2>
                 <hr className='login-divider' />
             </div>
-            <Form layout='vertical'>
-                <h2 className='login-command'>Login to your account</h2>
+            <Form layout='vertical' onFinish={onFinish}>
+                <h2 className='login-command'>Login to your account:</h2>
                 <Form.Item name='email' label='Email'>
                     <input type='text' />
                 </Form.Item>
