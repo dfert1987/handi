@@ -18,10 +18,32 @@ const Login = ({ setLogin }) => {
             </div>
             <Form layout='vertical' onFinish={onFinish}>
                 <h2 className='login-command'>Login to your account:</h2>
-                <Form.Item name='email' label='Email'>
+                <Form.Item
+                    name='email'
+                    label='Email'
+                    placeholder='email@gmail.com'
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Email is a required field.',
+                        },
+                        {
+                            type: 'email',
+                            message: 'Please enter a valid email.',
+                        },
+                    ]}>
                     <input type='text' />
                 </Form.Item>
-                <Form.Item name='password' label='Password'>
+                <Form.Item
+                    name='password'
+                    label='Password'
+                    placeholder='password'
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Password is a required field.',
+                        },
+                    ]}>
                     <input type='password' />
                 </Form.Item>
                 <button className='register' type='submit'>
