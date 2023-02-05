@@ -1,7 +1,9 @@
 import React from 'react';
 
-const protectedRoute = ({ children }) => {
+const ProtectedRoute = ({ children }) => {
     const user = JSON.parse(localStorage.getItem('user'));
+    console.log(user);
+    console.log(children);
     if (user) {
         return children;
     } else {
@@ -10,4 +12,4 @@ const protectedRoute = ({ children }) => {
     return <React.Fragment />;
 };
 
-export default protectedRoute;
+export default ProtectedRoute;
