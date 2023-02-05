@@ -1,11 +1,10 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Spinner } from 'reactstrap';
+import '../Styles/Loading.css';
 
 const Loader = () => {
-    return (
-        <div className='loader-parent'>
-            <div className='loader'></div>
-        </div>
-    );
+    return <Spinner className='spin' color='info'>Loading...</Spinner>;
 };
 
 export default Loader;

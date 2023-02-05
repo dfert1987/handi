@@ -1,13 +1,11 @@
 import React from 'react';
 import { RegisterUser } from '../../../Apis/authentication';
 import { Form, message } from 'antd';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { HideLoading, ShowLoading } from '../../../Redux/alertSlice';
 import '../../../Styles/Login.css';
 
 const Register = ({ setLogin }) => {
-    const navigate = useNavigate();
     const dispatch = useDispatch();
     const onFinish = async (values) => {
         try {
