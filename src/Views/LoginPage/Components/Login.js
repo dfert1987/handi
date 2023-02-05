@@ -9,6 +9,7 @@ const Login = ({ setLogin }) => {
             const response = await LoginUser(values);
             if (response.success) {
                 message.success(response.message);
+                window.location.href = '/';
             } else {
                 message.error(response.message);
             }
