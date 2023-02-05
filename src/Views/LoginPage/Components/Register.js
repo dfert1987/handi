@@ -1,18 +1,25 @@
 import React from 'react';
 import { RegisterUser } from '../../../Apis/authentication';
 import { Form, message } from 'antd';
+import { useDispatch } from 'react-redux';
+import { HideLoading, ShowLoading } from '../../../Redux/alertSlice';
 import '../../../Styles/Login.css';
 
 const Register = ({ setLogin }) => {
+    const dispatch = useDispatch();
     const onFinish = async (values) => {
         try {
+            dispatch(ShowLoading());
             const response = await RegisterUser(values);
+            dispatch(HideLoading());
             if (response.success) {
                 message.success(response.message);
+                setLogin(true);
             } else {
                 message.error(response.message);
             }
         } catch (error) {
+            dispatch(HideLoading());
             message.error(error.message);
         }
     };

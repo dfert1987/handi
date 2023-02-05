@@ -1,8 +1,15 @@
 html {
-    height: 100vh;
+}
+
+.main-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(../Assets/Images/background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    font-family: 'Abel-Regular';
 }
 
 label {
@@ -62,14 +69,6 @@ input {
     position: relative;
     bottom: 0em;
     font-size: 20px;
-}
-
-.main-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Abel-Regular';
 }
 
 .not-member-container {
