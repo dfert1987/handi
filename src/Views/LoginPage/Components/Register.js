@@ -9,6 +9,7 @@ const Register = ({ setLogin }) => {
             const response = await RegisterUser(values);
             if (response.success) {
                 message.success(response.message);
+                setLogin(true);
             } else {
                 message.error(response.message);
             }
