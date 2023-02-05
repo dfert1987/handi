@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import LoginPage from './Views/LoginPage/LoginPage';
 import { HomePage } from './Views/HomePage/HomePage';
 import './App.css';
-import ProtectedRoute from './Components/ProtectedRoute';
-import PublicRoute from './Components/PublicRoute';
+import ProtectedRoute from './Components/protectedRoute';
+import PublicRoute from './Components/publicRoute';
 
 export default function App() {
     return (
