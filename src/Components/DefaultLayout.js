@@ -13,14 +13,45 @@ const DefaultLayout = ({ children }) => {
             icon: <i class='ri-home-3-line'></i>,
         },
         {
+            title: 'Discover',
+            onClick: () => navigate('/find'),
+            icon: <i class='ri-map-2-line'></i>,
+        },
+        {
+            title: 'Add Review',
+            onClick: () => navigate('/review'),
+            icon: <i class='ri-edit-box-line'></i>,
+        },
+        {
+            title: 'Add Location',
+            onClick: () => navigate('/location'),
+            icon: <i class='ri-map-pin-add-line'></i>,
+        },
+        {
             title: 'Profile',
-            onClick: () => navigate()
-        }
+            onClick: () => navigate('/profile'),
+            icon: <i class='ri-profile-line'></i>,
+        },
+        {
+            title: 'Logout',
+            onClick: () => localStorage.removItem('user'),
+            icon: <i class='ri-logout-box-r-line'></i>,
+        },
     ];
     return (
         <div className='layout'>
             <div className='sidebar justify-content-between'>
-                <div className='menu'></div>
+                <div className='menu'>
+                    {userMenu.map((item, index) => {
+                        return (
+                            <div className='menu-item'>
+                                {item.icon}
+
+                                <span>{item.title}</span>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
             <div className='content'>
                 <div className='header'>

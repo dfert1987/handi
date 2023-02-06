@@ -1,6 +1,7 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 
-export const AddLocation = () => {};
+export const AddLocation = () => {
+    return <div>Location</div>
+};
 
 export default AddLocation;
