@@ -3,6 +3,8 @@
     font-family: 'Abel-Regular';
     src: url(./Assets/Fonts/Abel-Regular.ttf);
 }
+
+
 /* variables */
 :root {
     --heading-color: #444;
@@ -39,8 +41,6 @@ ul {
     color: var(--heading-color);
     display: inline-block;
 }
-
-
 
 bgp-primary {
     background-color: #444;

@@ -2,11 +2,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../Assets/Images/barblurry.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh;
     font-family: 'Abel-Regular';
+}
+
+html,
+body {
+    height: 100%;
+    background-image: url(../Assets/Images/barblurry.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 label {
