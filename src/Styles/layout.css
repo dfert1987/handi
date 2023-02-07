@@ -6,11 +6,10 @@
 }
 
 .header {
-    background-color: black;
-    padding: 20px;
+    background-color: rgb(68, 1, 91);
+    padding: 10px;
     text-align: center;
     color: white !important;
-    border-radius: 5px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -26,17 +25,47 @@
     margin-top: 1em;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.menu-item:hover {
+    transition: 600ms;
+    background-color: rgb(67, 31, 78);
+}
+
+.active-menu-item {
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgb(67, 31, 78);
+}
+
 .top-logo {
     height: 40px;
 }
 
 .logo-name {
     display: flex;
-    flex-direction: column;
+    margin-top: 1em;
 }
 
 .icon {
     height: 40px;
+}
+
+.shield {
+    font-size: 25px !important;
 }
 
 ri-3x .user-avatar {
@@ -51,7 +80,10 @@ ri-3x .user-avatar {
 
 .username {
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 1em;
 }
 
 .content {
@@ -64,8 +96,6 @@ ri-3x .user-avatar {
 .body {
     background-color: white;
     padding: 20px;
-    border: 2px solid gray;
-    border-radius: 5px;
     width: 100%;
     height: 85vh;
 }
@@ -74,8 +104,11 @@ ri-3x .user-avatar {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    background-color: black;
+    background-color: rgb(68, 1, 91);
     color: white;
     padding: 15px;
+}
+
+i {
+    font-size: 28px !important;
 }
