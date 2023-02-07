@@ -4,7 +4,7 @@ import Logo from '../Assets/Images/whitegator.png';
 import '../Styles/layout.css';
 
 const DefaultLayout = ({ children }) => {
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(true);
 
     const user = JSON.parse(localStorage.getItem('user'));
     const navigate = useNavigate();
@@ -57,31 +57,35 @@ const DefaultLayout = ({ children }) => {
                 <div
                     className='menu'
                     style={{
-                        width: 150,
+                        width: collapsed ? '0' : '150px',
+                        padding: collapsed ? '0' : '15px',
                     }}>
                     {userMenu.map((item, index) => {
                         const isActive = window.location.pathname === item.path;
-                        return (
-                            <div
-                                className={`menu-item ${
-                                    isActive && 'active-menu-item'
-                                }`}
-                                key={index}
-                                onClick={item.onClick}>
-                                {item.icon}
+                        if (!collapsed) {
+                            return (
+                                <div
+                                    className={`menu-item ${
+                                        isActive && 'active-menu-item'
+                                    }`}
+                                    key={index}
+                                    onClick={item.onClick}>
+                                    {item.icon}
 
-                                <span>{item.title}</span>
-                            </div>
-                        );
+                                    <span>{item.title}</span>
+                                </div>
+                            );
+                        }
+                        return null;
                     })}
                 </div>
             </div>
             <div className='content'>
                 <div className='header'>
-                    <div className='top-bar-title'>
+                    <div className='d-flex items-center gap-2 top-bar-title'>
                         {collapsed && (
                             <i
-                                className='ri-menu-2-fill'
+                                className='ri-menu-2-fill open'
                                 onClick={() => setCollapsed(false)}></i>
                         )}
                         {!collapsed && (

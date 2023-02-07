@@ -53,6 +53,7 @@
 
 .top-logo {
     height: 40px;
+    padding-left: 1em;
 }
 
 .logo-name {
@@ -106,9 +107,19 @@ ri-3x .user-avatar {
     justify-content: center;
     background-color: rgb(68, 1, 91);
     color: white;
-    padding: 15px;
+}
+
+.open {
+    padding-left: 1em;
 }
 
 i {
     font-size: 28px !important;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+i:hover {
+    color: #d506c3;
+    transition: 600ms;
 }
