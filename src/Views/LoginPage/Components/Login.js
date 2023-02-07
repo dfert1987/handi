@@ -28,7 +28,7 @@ const Login = ({ setLogin }) => {
     return (
         <div className='login-box'>
             <div className='login-title-area'>
-                <h1 className='login-title'>Welcome to Handi ATX!</h1>
+                <h1 className='login-title'>Welcome to GatorRater ATX!</h1>
                 <h2 className='login-subtitle'>
                     Rating Austin's Best Party Bathrooms
                 </h2>

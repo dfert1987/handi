@@ -27,7 +27,7 @@ const Register = ({ setLogin }) => {
     return (
         <div className='login-box'>
             <div className='login-title-area'>
-                <h1 className='login-title'>Join Handi ATX!</h1>
+                <h1 className='login-title'>Join GatorRater ATX!</h1>
                 <h2 className='login-subtitle'>
                     And start rating Austin's best party bathrooms today!
                 </h2>
