@@ -2,21 +2,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     font-family: 'Abel-Regular';
 }
 
 html,
 body {
     height: 100%;
-    background-image: url(../Assets/Images/barblurry.jpeg);
     height: 100vh;
+    background-image: url(../Assets/Images/barblurry.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    min-width: 320px;
+}
+#root {
+    height: 100%;
+    height: 100vh;
+}
+
+.all {
+    height: 100%;
+    height: 100vh;
 }
 
 label {
@@ -219,7 +229,7 @@ button:active {
     .sign-up {
         font-size: 1.5em;
         position: relative;
-        bottom: 0.275em;
+        bottom: 0.325em;
     }
     .login-box {
         padding: 2em;

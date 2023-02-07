@@ -2,12 +2,16 @@
     display: flex;
     padding: 1em;
     width: 100% !important;
+    overflow: hidden;
+    background-color: white;
     height: 100vh;
 }
 
 .header {
     background-color: rgb(68, 1, 91);
     padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     text-align: center;
     color: white !important;
     width: 100%;
@@ -22,13 +26,14 @@
 .top-bar-title {
     display: flex;
     flex-direction: row;
-    margin-top: 1em;
+    margin-top: 0.9em;
 }
 
 .menu {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    justify-content: center;
 }
 
 .menu-item {
@@ -52,13 +57,14 @@
 }
 
 .top-logo {
-    height: 40px;
-    padding-left: 1em;
+    height: 30px;
+    padding-left: 0.25em;
 }
 
 .logo-name {
     display: flex;
-    margin-top: 1em;
+    flex-direction: column;
+    margin-top: 0.5em;
 }
 
 .icon {
@@ -74,17 +80,17 @@ ri-3x .user-avatar {
 }
 
 .top-logo-text {
-    margin-top: 0.1em;
-    margin-left: 0.25em;
-    font-size: 2em;
+    margin-top: 0.3em;
+    margin-left: 0;
+    font-size: 1em;
 }
 
 .username {
     text-align: center;
-    font-size: 1em;
-    padding-top: 0.5em;
-    padding-left: 0.5em;
-    padding-right: 1em;
+    font-size: 0.75em;
+    margin-top: 0;
+    position: relative;
+    bottom: 0.25em;
 }
 
 .content {
@@ -104,17 +110,19 @@ ri-3x .user-avatar {
 .sidebar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
     background-color: rgb(68, 1, 91);
     color: white;
+    padding-top: 5em;
 }
 
 .open {
-    padding-left: 1em;
+    padding-left: 0.5em;
+    padding-top: 0.15em;
 }
 
 i {
-    font-size: 28px !important;
+    font-size: 18px !important;
     cursor: pointer;
     transition: 300ms;
 }
@@ -122,4 +130,50 @@ i {
 i:hover {
     color: #d506c3;
     transition: 600ms;
+}
+
+@media (min-width: 600px) {
+    i {
+        font-size: 28px !important;
+    }
+
+    .top-bar-title {
+        margin-top: 1em;
+    }
+
+    .top-logo-text {
+        font-size: 2em;
+        margin-top: 0.1em;
+        margin-left: 0.25em;
+    }
+
+    .top-logo {
+        height: 40px;
+        padding-left: 1em;
+    }
+
+    .open {
+        padding-left: 1em;
+        padding-top: 0;
+    }
+
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo-name {
+        flex-direction: row;
+        margin-top: 1em;
+    }
+
+    .username {
+        text-align: center;
+        font-size: 1em;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        padding-right: 1em;
+        position: relative;
+        bottom: 0;
+    }
 }

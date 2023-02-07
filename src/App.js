@@ -14,7 +14,7 @@ import './App.css';
 export default function App() {
     const { loading } = useSelector((state) => state.alert);
     return (
-        <div>
+        <div className='all'>
             {loading && <Loader />}
             <BrowserRouter>
                 <Routes>
