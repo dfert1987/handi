@@ -5,7 +5,7 @@ import HomePage from './Views/HomePage/HomePage';
 import ProtectedRoute from './Components/ProtectedRoute';
 import PublicRoute from './Components/PublicRoute';
 import Loader from './Components/Loader';
-import ProfilePage from './Views/ProfilePage';
+import ProfilePage from './Views/Profile/ProfilePage';
 import Find from './Views/FindPage/Find';
 import AddLocation from './Views/AddLocation';
 import AddReview from './Views/AddReview';

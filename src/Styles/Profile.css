@@ -1,0 +1,122 @@
+.profile-container {
+    height: 100%;
+    font-family: 'Abel-Regular';
+}
+
+.top-band {
+    height: 18;
+    background-color: #dcdcdcaa;
+    width: 100%;
+}
+
+.banner-content {
+    height: 100%;
+    padding-left: 15em;
+    padding-right: 15em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.avatar-image {
+    height: 18em;
+    position: relative;
+    width: 16em;
+    border: 2px darkgray solid;
+    border-radius: 4px;
+    top: 7em;
+}
+
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.addPhoto {
+    display: flex;
+    flex-direction: row;
+    background-color: darkgray;
+    padding: 0.1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    position: relative;
+    top: 3.75em;
+}
+
+.photoText {
+    margin-top: 0.1em;
+    margin-bottom: 0;
+}
+
+.camera {
+    padding-right: 0.25em;
+    font-size: 18px !important;
+}
+
+.name-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8em;
+}
+
+.stats-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.stat-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-name {
+    font-weight: bolder;
+    font-size: 3em;
+    color: rgb(68, 1, 91);
+}
+
+.location {
+    font-size: 1.75em;
+}
+
+.stat-container {
+    margin-right: 1em;
+}
+
+.statIcon {
+    color: rgb(68, 1, 91);
+}
+
+.stat {
+    margin-top: 0.75em;
+    margin-left: 0.25em;
+}
+
+.vl {
+    border-left: 2px solid rgb(195, 193, 193);
+    height: 12em;
+    margin-top: 6em;
+}
+
+.add-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7em;
+}
+
+.side {
+    color: rgb(0, 140, 178);
+}
+
+.sideIcon {
+    color: rgb(0, 140, 178);
+    margin-top: 0.5em;
+}
+
+.add-item {
+    display: flex;
+    flex-direction: row;
+}
+
+
+

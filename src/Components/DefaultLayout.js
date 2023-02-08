@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../Assets/Images/whitegator.png';
-import '../Styles/layout.css';
+import '../Styles/Layout.css';
 
 const DefaultLayout = ({ children }) => {
     const [collapsed, setCollapsed] = useState(true);
