@@ -124,6 +124,11 @@
     flex-direction: row;
 }
 
+.under-band {
+    display: flex;
+    flex-direction: row;
+}
+
 @media (min-width: 768px) {
     .top-band {
         height: 20em;

@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
+import ViewOptions from './ViewOptions';
 import nopic from '../../Assets/Images/nopic.png';
 import '../../Styles/Profile.css';
 
@@ -86,6 +87,9 @@ export const ProfilePage = ({ children }) => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className='under-band'>
+                <ViewOptions />
             </div>
         </div>
     );
