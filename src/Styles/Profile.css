@@ -124,11 +124,25 @@
     flex-direction: row;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
     .top-band {
         height: 20em;
     }
+    .banner-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+    .name-section {
+        padding-top: 4em;
+    }
+
+    .add-section {
+        padding-top: 4em;
+    }
+}
+
+@media (min-width: 1400px) {
     .banner-content {
         padding-left: 13em;
         padding-right: 15em;
