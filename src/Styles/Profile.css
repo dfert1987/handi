@@ -4,32 +4,35 @@
 }
 
 .top-band {
-    height: 18;
+    height: 100vh;
     background-color: #dcdcdcaa;
     width: 100%;
 }
 
 .banner-content {
     height: 100%;
-    padding-left: 15em;
-    padding-right: 15em;
+    padding-left: 1em;
+    padding-right: 2em;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    padding-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .avatar-image {
-    height: 18em;
-    position: relative;
-    width: 16em;
+    height: 14em;
+    width: 13em;
     border: 2px darkgray solid;
     border-radius: 4px;
-    top: 7em;
 }
 
 .avatar-container {
     display: flex;
     flex-direction: column;
+    width: 12em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .addPhoto {
@@ -38,9 +41,9 @@
     background-color: darkgray;
     padding: 0.1em;
     padding-left: 0.5em;
+    width: 13rem;
     padding-right: 0.5em;
-    position: relative;
-    top: 3.75em;
+    margin-top: 0;
 }
 
 .photoText {
@@ -56,12 +59,15 @@
 .name-section {
     display: flex;
     flex-direction: column;
-    padding-top: 8em;
+    padding-top: 1em;
+    padding-left: 1em;
+    text-align: center;
 }
 
 .stats-section {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .stat-container {
@@ -71,12 +77,13 @@
 
 .profile-name {
     font-weight: bolder;
-    font-size: 3em;
+    font-size: 2em;
     color: rgb(68, 1, 91);
 }
 
 .location {
-    font-size: 1.75em;
+    font-size: 1.25em;
+    padding: 0.25em;
 }
 
 .stat-container {
@@ -88,20 +95,20 @@
 }
 
 .stat {
-    margin-top: 0.75em;
+    margin-top: 0.25em;
     margin-left: 0.25em;
 }
 
 .vl {
-    border-left: 2px solid rgb(195, 193, 193);
-    height: 12em;
-    margin-top: 6em;
+    display: none;
 }
 
 .add-section {
     display: flex;
     flex-direction: column;
-    padding-top: 7em;
+    padding-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .side {
@@ -110,7 +117,6 @@
 
 .sideIcon {
     color: rgb(0, 140, 178);
-    margin-top: 0.5em;
 }
 
 .add-item {
@@ -118,5 +124,85 @@
     flex-direction: row;
 }
 
+@media (min-width: 1400px) {
+    .top-band {
+        height: 20em;
+    }
 
+    .banner-content {
+        padding-left: 13em;
+        padding-right: 15em;
+        margin-left: 0;
+        margin-right: 0;
+        justify-content: space-between;
+        padding-top: 0;
+        display: flex;
+        flex-direction: row;
+    }
 
+    .avatar-image {
+        height: 18em;
+        position: relative;
+        width: 16em;
+        border: 2px darkgray solid;
+        border-radius: 4px;
+        top: 7em;
+    }
+
+    .avatar-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .addPhoto {
+        padding: 0.1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        position: relative;
+        top: 3.75em;
+        margin-top: 1em;
+        width: 16em;
+    }
+
+    .name-section {
+        padding-top: 8em;
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .profile-name {
+        font-size: 3em;
+    }
+
+    .location {
+        font-size: 1.75em;
+        padding: 0;
+    }
+
+    .stats-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    .stat {
+        margin-top: 0.75em;
+    }
+
+    .vl {
+        display: block;
+        border-left: 2px solid rgb(195, 193, 193);
+        height: 12em;
+        margin-top: 6em;
+    }
+
+    .add-section {
+        padding-top: 7em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sideIcon {
+        margin-top: 0.5em;
+    }
+}
