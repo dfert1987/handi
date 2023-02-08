@@ -42,7 +42,6 @@ const DefaultLayout = ({ children }) => {
         {
             title: 'Logout',
             onClick: () => {
-                console.log(localStorage);
                 localStorage.removeItem('user');
                 navigate('/login');
             },
@@ -102,8 +101,14 @@ const DefaultLayout = ({ children }) => {
                     </div>
                     <span>
                         <div className='logo-name'>
-                            <i className='ri-shield-user-line'></i>
-                            <span className='username'>{user?.username}</span>
+                            <i
+                                className='ri-shield-user-line'
+                                onClick={() => navigate('/profile')}></i>
+                            <span
+                                className='username'
+                                onClick={() => navigate('/profile')}>
+                                {user?.username}
+                            </span>
                         </div>
                     </span>
                 </div>
