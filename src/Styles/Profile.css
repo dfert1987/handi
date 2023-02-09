@@ -145,7 +145,7 @@
     padding-top: 9em;
     justify-content: center;
     text-align: center;
-    width: 100%;
+    padding-right: 7em;
 }
 
 .viewOptions-header {
@@ -197,6 +197,20 @@
 .main-view-container {
     display: flex;
     flex-direction: column;
+    padding-top: 2em;
+    width: 32%;
+}
+
+.main-title {
+    color: rgb(68, 1, 91);
+}
+
+.recent-title {
+    color: rgb(68, 1, 91);
+}
+
+.friends-compliments-container {
+    padding-bottom: 2em;
 }
 
 @media (min-width: 768px) {

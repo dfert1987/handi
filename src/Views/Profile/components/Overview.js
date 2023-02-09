@@ -4,7 +4,7 @@ import '../../../Styles/Profile.css';
 const Overview = ({ user }) => {
     return (
         <>
-            <div className='friens-compliments-container'>
+            <div className='friends-compliments-container'>
                 <h3 className='main-title friends-compliments'>
                     Friend Requests and Compliments
                 </h3>
