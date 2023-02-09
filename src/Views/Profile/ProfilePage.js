@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import ViewOptions from './ViewOptions';
 import nopic from '../../Assets/Images/nopic.png';
+import schneef from '../../Assets/Images/schneef.png';
 import '../../Styles/Profile.css';
 
 export const ProfilePage = ({ children }) => {
@@ -57,6 +58,14 @@ export const ProfilePage = ({ children }) => {
                                 <i className='ri-star-line statIcon'></i>
                                 <p className='stat'>0 Reviews</p>
                             </div>
+                            <div className='stat-container last-stat'>
+                                <img
+                                    className='statIcon schneef'
+                                    alt='schneef nose'
+                                    src={schneef}
+                                />
+                                <p className='stat'>0 Stalls Schneefed In</p>
+                            </div>
                         </div>
                     </div>
                     <div className='vl'></div>
@@ -89,7 +98,7 @@ export const ProfilePage = ({ children }) => {
                 </div>
             </div>
             <div className='under-band'>
-                <ViewOptions />
+                <ViewOptions user={user} />
             </div>
         </div>
     );

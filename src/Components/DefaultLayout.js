@@ -50,15 +50,31 @@ const DefaultLayout = ({ children }) => {
         },
     ];
 
+    console.log(collapsed);
+
     return (
         <div className='layout'>
             <div className='sidebar justify-content-between'>
+            
                 <div
                     className='menu'
                     style={{
-                        width: collapsed ? '0' : '150px',
+                        width: collapsed ? '0' : '300px',
                         padding: collapsed ? '0' : '15px',
                     }}>
+                    {!collapsed ? (
+                        <div className='menu-logo'>
+                            <i
+                                className='ri-close-line'
+                                onClick={() => setCollapsed(true)}></i>
+                            <img
+                                className='top-logo'
+                                src={Logo}
+                                alt='Gator Rater Logo'
+                            />
+                            <h5 className='top-logo-text'>GatorRater</h5>
+                        </div>
+                    ) : null}
                     {userMenu.map((item, index) => {
                         const isActive = window.location.pathname === item.path;
                         if (!collapsed) {
