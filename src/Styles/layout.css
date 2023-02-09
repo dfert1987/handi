@@ -1,9 +1,16 @@
 .layout {
     display: flex;
     padding: 1em;
-    width: 100% !important;
+    padding-left: 0;
+    padding-bottom: 0;
     background-color: white;
-    height: 100vh;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.closeMenu {
+    font-size: 1em !important;
 }
 
 .header {
@@ -103,21 +110,50 @@ ri-3x .user-avatar {
     width: 100% !important;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.closeMenu {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    padding-left: 2em;
+}
+
+.closeMenu i {
+    font-size: 2em !important;
+}
+
+.closeMenu span {
+    margin-top: 0.85em;
 }
 
 .body {
     background-color: white;
     width: 100%;
-    height: 85vh;
+    height: 100%;
+    width: 100%;
+}
+
+.menu-logo {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.5em;
+    padding-left: 0.5em;
 }
 
 .sidebar {
-    display: flex;
     align-items: center;
     flex-direction: column;
     background-color: rgb(68, 1, 91);
     color: white;
-    padding-top: 5em;
+    min-height: 100%;
+    position: absolute;
+    z-index: 99999;
 }
 
 .open {
