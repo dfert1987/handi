@@ -14,35 +14,45 @@ export const ViewOptions = ({ user, mainView, setMainView }) => {
             <h4 className='viewOptions-header'>{user.username}'s Profile</h4>
             <div className='view-options'>
                 <div className='option-divider'>
-                    <div className={selectedView('overview')}>
+                    <div
+                        className={selectedView('overview')}
+                        onClick={() => setMainView('overview')}>
                         <i className='ri-profile-line optionIcon'></i>
                         <p className='optionText'>Profile Overview</p>
                     </div>
                     <hr />
                 </div>
                 <div className='option-divider'>
-                    <div className={selectedView('friends')}>
+                    <div
+                        className={selectedView('friends')}
+                        onClick={() => setMainView('friends')}>
                         <i className='ri-user-heart-line optionIcon'></i>
                         <p className='optionText'>Friends</p>
                     </div>
                     <hr />
                 </div>
                 <div className='option-divider'>
-                    <div className={selectedView('reviews')}>
+                    <div
+                        className={selectedView('reviews')}
+                        onClick={() => setMainView('reviews')}>
                         <i className='ri-star-line optionIcon'></i>
                         <p className='optionText'>Reviews</p>
                     </div>
                     <hr />
                 </div>
                 <div className='option-divider'>
-                    <div className={selectedView('compliments')}>
+                    <div
+                        className={selectedView('compliments')}
+                        onClick={() => setMainView('compliments')}>
                         <i className='ri-award-line optionIcon'></i>
                         <p className='optionText'>Compliments</p>
                     </div>
                     <hr />
                 </div>
                 <div className='option-divider'>
-                    <div className={selectedView('schneef')}>
+                    <div
+                        className={selectedView('schneef')}
+                        onClick={() => setMainView('schneef')}>
                         <img
                             className='schneef option'
                             alt='schneef nose'
