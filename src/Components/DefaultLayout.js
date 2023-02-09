@@ -50,8 +50,6 @@ const DefaultLayout = ({ children }) => {
         },
     ];
 
-    console.log(collapsed);
-
     return (
         <div className='layout'>
             <div className='sidebar justify-content-between'>

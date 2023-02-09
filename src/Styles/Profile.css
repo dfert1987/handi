@@ -157,6 +157,22 @@
     margin-right: 0;
 }
 
+.viewOption {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    color: rgb(68, 1, 91);
+}
+
+.optionText {
+    margin-top: 0.75em;
+    padding-left: 0.5em;
+}
+
+.optionText:hover {
+    color: #d506c3;
+}
+
 @media (min-width: 768px) {
     .top-band {
         height: 20em;
@@ -258,5 +274,7 @@
         margin-left: 0;
         margin-right: 0;
         text-align: left;
+        padding-left: 13em;
+        padding-top: 6em;
     }
 }
