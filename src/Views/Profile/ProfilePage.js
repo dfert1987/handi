@@ -10,7 +10,7 @@ export const ProfilePage = ({ children }) => {
     const [avatar, setAvatar] = useState(nopic);
     const [mainView, setMainView] = useState('overview');
     const user = JSON.parse(localStorage.getItem('user'));
-
+    console.log(user);
     useEffect(() => {
         if (user.avatar) {
             setAvatar(user.avatar);

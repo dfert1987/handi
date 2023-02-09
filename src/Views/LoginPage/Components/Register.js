@@ -8,6 +8,7 @@ import '../../../Styles/Login.css';
 const Register = ({ setLogin }) => {
     const dispatch = useDispatch();
     const onFinish = async (values) => {
+        values.dateAdded = new Date();
         try {
             dispatch(ShowLoading());
             const response = await RegisterUser(values);

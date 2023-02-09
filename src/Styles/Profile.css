@@ -196,9 +196,9 @@
 
 .main-view-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 66%;
     padding-top: 2em;
-    width: 32%;
 }
 
 .main-title {
@@ -211,6 +211,18 @@
 
 .friends-compliments-container {
     padding-bottom: 2em;
+}
+
+.left-overview {
+    display: flex;
+    flex-direction: column;
+    /* width: 34.5em; */
+}
+
+.right-overview {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #dcdcdcaa;
 }
 
 @media (min-width: 768px) {
