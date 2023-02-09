@@ -162,15 +162,32 @@
     display: flex;
     flex-direction: row;
     color: rgb(68, 1, 91);
+    transition: 300ms;
+    height: 4em;
+    padding-top: 1em;
+}
+
+.viewOption:hover {
+    background-color: #dcdcdcaa;
+    transition: 600ms;
 }
 
 .optionText {
+    margin-bottom: 0;
     margin-top: 0.75em;
     padding-left: 0.5em;
 }
 
-.optionText:hover {
-    color: #d506c3;
+.option-divider {
+    display: flex;
+    flex-direction: column;
+    max-width: 10em;
+    height: 4em;
+}
+
+.option-divider hr {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
