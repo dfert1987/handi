@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import schneef from '../../../Assets/Images/schneef.png';
 import '../../../Styles/Profile.css';
 export const ViewOptions = ({ user, mainView, setMainView }) => {

@@ -194,6 +194,11 @@
     margin-bottom: 0;
 }
 
+.main-view-container {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (min-width: 768px) {
     .top-band {
         height: 20em;

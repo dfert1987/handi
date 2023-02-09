@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
 import ViewOptions from './components/ViewOptions';
+import MainProfile from './components/MainProfile';
 import nopic from '../../Assets/Images/nopic.png';
 import schneef from '../../Assets/Images/schneef.png';
 import '../../Styles/Profile.css';
@@ -104,6 +105,7 @@ export const ProfilePage = ({ children }) => {
                     mainView={mainView}
                     setMainView={setMainView}
                 />
+                <MainProfile user={user} mainView={mainView} />
             </div>
         </div>
     );
