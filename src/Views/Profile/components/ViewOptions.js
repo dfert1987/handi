@@ -1,41 +1,48 @@
-import React from 'react';
-import schneef from '../../Assets/Images/schneef.png';
-import '../../Styles/Profile.css';
-export const ViewOptions = ({ user }) => {
+import React, { useState } from 'react';
+import schneef from '../../../Assets/Images/schneef.png';
+import '../../../Styles/Profile.css';
+export const ViewOptions = ({ user, mainView, setMainView }) => {
+    const selectedView = (option) => {
+        if (option === mainView) {
+            return 'viewOption selectedView';
+        }
+        return 'viewOption';
+    };
+
     return (
         <div className='view-options-container'>
             <h4 className='viewOptions-header'>{user.username}'s Profile</h4>
             <div className='view-options'>
                 <div className='option-divider'>
-                    <div className='viewOption'>
+                    <div className={selectedView('overview')}>
                         <i className='ri-profile-line optionIcon'></i>
                         <p className='optionText'>Profile Overview</p>
                     </div>
                     <hr />
                 </div>
                 <div className='option-divider'>
-                    <div className='viewOption'>
+                    <div className={selectedView('friends')}>
                         <i className='ri-user-heart-line optionIcon'></i>
                         <p className='optionText'>Friends</p>
                     </div>
                     <hr />
                 </div>
                 <div className='option-divider'>
-                    <div className='viewOption'>
+                    <div className={selectedView('reviews')}>
                         <i className='ri-star-line optionIcon'></i>
                         <p className='optionText'>Reviews</p>
                     </div>
                     <hr />
                 </div>
                 <div className='option-divider'>
-                    <div className='viewOption'>
+                    <div className={selectedView('compliments')}>
                         <i className='ri-award-line optionIcon'></i>
                         <p className='optionText'>Compliments</p>
                     </div>
                     <hr />
                 </div>
                 <div className='option-divider'>
-                    <div className='viewOption'>
+                    <div className={selectedView('schneef')}>
                         <img
                             className='schneef option'
                             alt='schneef nose'

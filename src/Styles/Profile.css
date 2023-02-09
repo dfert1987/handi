@@ -172,6 +172,10 @@
     transition: 600ms;
 }
 
+.selectedView {
+    background-color: #dcdcdcaa;
+}
+
 .optionText {
     margin-bottom: 0;
     margin-top: 0.75em;
