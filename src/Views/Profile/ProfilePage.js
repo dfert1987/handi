@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import ViewOptions from './components/ViewOptions';
 import MainProfile from './components/MainProfile';
+import ImageModal from '../../Components/AddPhoto';
 import nopic from '../../Assets/Images/nopic.png';
 import schneef from '../../Assets/Images/schneef.png';
 import '../../Styles/Profile.css';
@@ -9,15 +10,15 @@ import '../../Styles/Profile.css';
 export const ProfilePage = ({ children }) => {
     const [avatar, setAvatar] = useState(nopic);
     const [mainView, setMainView] = useState('overview');
+    const [viewImageUpload, setViewImageUpload] = useState(false);
+
     const user = JSON.parse(localStorage.getItem('user'));
-    console.log(user);
+
     useEffect(() => {
         if (user.avatar) {
             setAvatar(user.avatar);
         } else setAvatar(nopic);
     }, [user]);
-
-    const setNewAvatar = () => {};
 
     const getUserLocation = () => {
         if (user.city && user.state) {
@@ -43,7 +44,7 @@ export const ProfilePage = ({ children }) => {
                         />
                         <button
                             className='register addPhoto'
-                            onClick={() => setNewAvatar()}>
+                            onClick={() => setViewImageUpload(true)}>
                             <i className='ri-camera-3-line camera'></i>
                             <p className='photoText'>+Add Photo</p>
                         </button>
@@ -107,6 +108,7 @@ export const ProfilePage = ({ children }) => {
                 />
                 <MainProfile user={user} mainView={mainView} />
             </div>
+            {viewImageUpload ? <ImageModal user={user} /> : null}
         </div>
     );
 };
