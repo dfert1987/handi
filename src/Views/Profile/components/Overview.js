@@ -16,6 +16,11 @@ const Overview = ({ user }) => {
                 return user.dateAdded;
             }
             return 'unknown';
+        } else if (infoType === 'bio') {
+            if (user.bio) {
+                return user.bio;
+            }
+            return 'unknown';
         }
     };
 
@@ -34,7 +39,9 @@ const Overview = ({ user }) => {
                     <h3 className='recent-title'>Recent Activity</h3>
                     <hr className='activity-divider' />
                     <div className='activities'>
-                        <p className='no-activities'>Do you even party?</p>
+                        <p className='no-activities'>
+                            No recent activity. Do you even party?
+                        </p>
                     </div>
                 </div>
             </div>
@@ -47,6 +54,10 @@ const Overview = ({ user }) => {
                 <div className='overview-sub'>
                     <h5 className='about-subtitle'>Schneefing Since:</h5>
                     <p className='info'>{getInfo('schneef')}</p>
+                </div>
+                <div className='overview-sub'>
+                    <h5 className='about-subtitle'>Bio:</h5>
+                    <p className='info'>{getInfo('bio')}</p>
                 </div>
             </div>
         </>

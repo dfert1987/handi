@@ -197,7 +197,6 @@
 .main-view-container {
     display: flex;
     flex-direction: row;
-    width: 66%;
     padding-top: 2em;
 }
 
@@ -216,13 +215,24 @@
 .left-overview {
     display: flex;
     flex-direction: column;
-    /* width: 34.5em; */
+    width: 45em;
 }
 
 .right-overview {
     display: flex;
     flex-direction: column;
     border-left: 2px solid #dcdcdcaa;
+    padding-left: 3em;
+}
+
+.about-title {
+    color: rgb(68, 1, 91);
+    font-size: 2em;
+}
+
+.about-subtitle {
+    color: rgb(68, 1, 91);
+    margin-bottom: 0.1em;
 }
 
 @media (min-width: 768px) {

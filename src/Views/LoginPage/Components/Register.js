@@ -16,7 +16,7 @@ const Register = ({ setLogin }) => {
         if (dd < 10) dd = '0' + dd;
         if (mm < 10) mm = '0' + mm;
 
-        const formattedDate = dd + '/' + mm + '/' + yyyy;
+        const formattedDate = mm + '/' + dd + '/' + yyyy;
 
         values.dateAdded = formattedDate;
         try {
