@@ -108,7 +108,9 @@ export const ProfilePage = ({ children }) => {
                 />
                 <MainProfile user={user} mainView={mainView} />
             </div>
-            {viewImageUpload ? <ImageModal user={user} /> : null}
+            {viewImageUpload ? (
+                <ImageModal user={user} setViewImageUpload={setViewImageUpload} />
+            ) : null}
         </div>
     );
 };
