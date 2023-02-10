@@ -9,9 +9,22 @@ export const ViewOptions = ({ user, mainView, setMainView }) => {
         return 'viewOption';
     };
 
+    const getNameofProf = () => {
+        let userName = user.username;
+        let last = userName.charAt(userName.length - 1);
+        if (last === 's') {
+            return (
+                <h4 className='viewOptions-header'>{`${userName}' Profile`}</h4>
+            );
+        } else
+            return (
+                <h4 className='viewOptions-header'>{`${userName}'s Profile`}</h4>
+            );
+    };
+
     return (
         <div className='view-options-container'>
-            <h4 className='viewOptions-header'>{user.username}'s Profile</h4>
+            {getNameofProf()}
             <div className='view-options'>
                 <div className='option-divider'>
                     <div
