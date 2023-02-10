@@ -145,7 +145,7 @@
     padding-top: 9em;
     justify-content: center;
     text-align: center;
-    width: 100%;
+    padding-right: 7em;
 }
 
 .viewOptions-header {
@@ -172,6 +172,10 @@
     transition: 600ms;
 }
 
+.selectedView {
+    background-color: #dcdcdcaa;
+}
+
 .optionText {
     margin-bottom: 0;
     margin-top: 0.75em;
@@ -188,6 +192,47 @@
 .option-divider hr {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.main-view-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2em;
+}
+
+.main-title {
+    color: rgb(68, 1, 91);
+}
+
+.recent-title {
+    color: rgb(68, 1, 91);
+}
+
+.friends-compliments-container {
+    padding-bottom: 2em;
+}
+
+.left-overview {
+    display: flex;
+    flex-direction: column;
+    width: 45em;
+}
+
+.right-overview {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #dcdcdcaa;
+    padding-left: 3em;
+}
+
+.about-title {
+    color: rgb(68, 1, 91);
+    font-size: 2em;
+}
+
+.about-subtitle {
+    color: rgb(68, 1, 91);
+    margin-bottom: 0.1em;
 }
 
 @media (min-width: 768px) {

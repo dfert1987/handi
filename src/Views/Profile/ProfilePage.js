@@ -1,14 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react';
-import ViewOptions from './ViewOptions';
+import ViewOptions from './components/ViewOptions';
+import MainProfile from './components/MainProfile';
 import nopic from '../../Assets/Images/nopic.png';
 import schneef from '../../Assets/Images/schneef.png';
 import '../../Styles/Profile.css';
 
 export const ProfilePage = ({ children }) => {
     const [avatar, setAvatar] = useState(nopic);
+    const [mainView, setMainView] = useState('overview');
     const user = JSON.parse(localStorage.getItem('user'));
-
+    console.log(user);
     useEffect(() => {
         if (user.avatar) {
             setAvatar(user.avatar);
@@ -98,7 +100,12 @@ export const ProfilePage = ({ children }) => {
                 </div>
             </div>
             <div className='under-band'>
-                <ViewOptions user={user} />
+                <ViewOptions
+                    user={user}
+                    mainView={mainView}
+                    setMainView={setMainView}
+                />
+                <MainProfile user={user} mainView={mainView} />
             </div>
         </div>
     );

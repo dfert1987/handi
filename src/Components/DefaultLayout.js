@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../Assets/Images/whitegator.png';
-import '../Styles/Layout.css';
+import '../Styles/layout.css';
 
 const DefaultLayout = ({ children }) => {
     const [collapsed, setCollapsed] = useState(true);
@@ -53,7 +53,6 @@ const DefaultLayout = ({ children }) => {
     return (
         <div className='layout'>
             <div className='sidebar justify-content-between'>
-            
                 <div
                     className='menu'
                     style={{
