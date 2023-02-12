@@ -1,10 +1,14 @@
 import React, { useState, useMemo } from 'react';
+import { storage } from '../firebaseConfig';
+import { ref, uploadBytes } from 'firebase/storage';
+import { v4 } from 'uuid';
 import { Button, message, Upload } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 import '../Styles/ImageModal.css';
 
 const ImageModal = ({ user, setViewImageUpload }) => {
     const [avatar, setAvatar] = useState();
+    const [noButton, setNoButton] = useState(true);
 
     const validateFileType = ({ type, name }, allowedTypes) => {
         if (!allowedTypes) {
@@ -15,7 +19,17 @@ const ImageModal = ({ user, setViewImageUpload }) => {
         }
     };
 
-    console.log(avatar);
+    const uploadImage = () => {
+        if (!avatar) {
+            return null;
+        } else {
+            const imageRef = ref(storage, `avatars/${avatar.name + v4()}`);
+            uploadBytes(imageRef, avatar).then(() => {
+                console.log(avatar);
+                alert('Image Uploaded');
+            });
+        }
+    };
 
     const uploadProps = useMemo(
         () => ({
@@ -37,11 +51,13 @@ const ImageModal = ({ user, setViewImageUpload }) => {
                     return false;
                 } else {
                     setAvatar(file);
+                    setNoButton(false);
                     return false;
                 }
             },
             onRemove: () => {
                 setAvatar();
+                setNoButton(true);
                 return true;
             },
         }),
@@ -57,7 +73,10 @@ const ImageModal = ({ user, setViewImageUpload }) => {
             <div className='modal-body'>
                 <Upload {...uploadProps} listType='picture' maxCount={1}>
                     <Button icon={<UploadOutlined />}>Upload an Image</Button>
-                </Upload>{' '}
+                </Upload>
+                <Button disabled={noButton} onClick={uploadImage}>
+                    Add Image
+                </Button>
             </div>
         </div>
     );
